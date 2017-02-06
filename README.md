@@ -1,5 +1,5 @@
 # Recursive-examples
-# function used to calculate a^b
+#function used to calculate a^b
 power=function(a,b){
   if(b<0){
     return(0)
@@ -10,7 +10,7 @@ power=function(a,b){
   }
 }
 
-# function for permutations
+#function for permutations
 
 per=function(a){
   permutation(a,"")
@@ -26,4 +26,20 @@ permutation=function(a,prefix){
       permutation(rem,paste(prefix,substr(a,i+1,i+1),sep=""))
     }
   }
+}
+
+#Fibonacci numbers
+fib=function(n){
+  if(n<2){
+    n
+  }else{
+    fib(n-1)+fib(n-2)
+  }
+}
+fibonacci=function(m){
+  a=numeric()
+  for(i in 0:m){
+    a[i+1]<-fib(i)
+  }
+  return(a)
 }
